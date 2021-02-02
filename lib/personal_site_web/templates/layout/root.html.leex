@@ -1,101 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <%= csrf_meta_tag() %>
-    <%= live_title_tag assigns[:page_title] || "PersonalSite", suffix: " · Phoenix Framework" %>
-    <link phx-track-static rel="stylesheet" href="<%= Routes.static_path(@conn, "/css/app.css") %>"/>
-    <script defer phx-track-static type="text/javascript" src="<%= Routes.static_path(@conn, "/js/app.js") %>"></script>
-  </head>
-  <body class="h-screen flex flex-col">
-    <header>
-        <nav id="header" role="navigation" class="w-full top-0 bg-gray-50">
-<div
-				class="w-full flex items-center justify-between mt-0 py-2"
-			>
-				<div
-					class="pl-4 flex items-center"
-					style="font-family: 'Inconsolata', monospace;"
-				>
-					<a
-						class="text-purple-900 no-underline hover:no-underline font-bold text-2xl lg:text-4xl"
-						href="#"
-					>
-						<svg
-							id="Artwork"
-							class="h-8 fill-current inline"
-							xmlns="http://www.w3.org/2000/svg"
-							viewBox="0 0 154.87 153.27"
-							width="33px"
-						>
-							<defs>
-								<style>
-									.cls-1 {
-										fill: #E8B45F;
-										stroke: #E8B45F;
-										stroke-miterlimit: 10;
-										stroke-width: 3px;
-										max-width: 33px;
-									}
-								</style>
-							</defs>
-							<title>crossed-keys-bold</title>
-							<text x="-282.53" y="-211.04" />
-							<path
-								class="cls-1"
-								d="M398,279.86a22.18,22.18,0,1,0,18.52-37.66,22.19,22.19,0,1,0-28.72,23.94l-27,27-27.46-27.46a22.18,22.18,0,1,0-30-23.51A22.19,22.19,0,1,0,327,271.76l27.6,27.6-46.83,46.83a2.59,2.59,0,0,0,0,3.66l2.52,2.52a2.59,2.59,0,0,0,3.66,0l46.83-46.83,31.56,31.56-12,12a2.5,2.5,0,0,0,3.54,3.54l3.71-3.71,5.94,5.94-3.71,3.71a2.5,2.5,0,1,0,3.54,3.54l12-12-11-11,13.21,13.21a2.59,2.59,0,0,0,3.66,0l2.52-2.52a2.59,2.59,0,0,0,0-3.66L367,299.35l26.4-26.4A21.93,21.93,0,0,0,398,279.86Zm-74.51-18.5a0.48,0.48,0,0,0-.54.56,16.63,16.63,0,0,1-28.67,13.68,16.79,16.79,0,0,1,.49-23.09,16.58,16.58,0,0,1,13.57-4.71,0.46,0.46,0,0,0,.51-0.53,16.6,16.6,0,0,1,4.49-14,16.63,16.63,0,1,1,23.73,23.32A16.58,16.58,0,0,1,323.53,261.36Zm59.16-4.43A16.63,16.63,0,1,1,411,247a0.46,0.46,0,0,0,.53.51,16.6,16.6,0,0,1,14,4.49,16.63,16.63,0,1,1-23.32,23.73,16.58,16.58,0,0,1-4.75-13.58,0.48,0.48,0,0,0-.56-0.54A16.6,16.6,0,0,1,382.69,256.93Z"
-								transform="translate(-282.53 -211.04)"
-							/>
-							<path
-								class="cls-1"
-								d="M329.24,337.09l-13,13,12,12a2.5,2.5,0,1,0,3.54-3.54L328,354.83l5.94-5.94,3.71,3.71a2.5,2.5,0,1,0,3.54-3.54Z"
-								transform="translate(-282.53 -211.04)"
-							/>
-						</svg>
-						cfbender
-					</a>
-				</div>
 
-							<a
-								class="inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4"
-								href="#projects"
-								>Projects</a
-							>
-			</div>
-		</nav>
-      </section>
-    </header>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <%= csrf_meta_tag() %>
+    <%= live_title_tag assigns[:page_title] || "PersonalSite" , suffix: " · Phoenix Framework" %>
+      <link phx-track-static rel="stylesheet" href="<%= Routes.static_path(@conn, " /css/app.css") %>"/>
+      <script defer phx-track-static type="text/javascript" src="<%= Routes.static_path(@conn, " /js/app.js")
+        %>"></script>
+</head>
 
-<main class="m-auto mb-auto w-full flex-auto px-2">
-      <%= @inner_content %>
-</main>
-    <footer class="bg-gray-50 w-full py-2">
-      <div class="flex justify-between mx-4">
-						<a
-							class="text-sm"
-							href="https://github.com/cfbender/personal-site"
-							><svg
-								class="h-6 fill-current text-gray-600 inline mr-2"
-								role="img"
-								viewBox="0 0 24 24"
-								xmlns="http://www.w3.org/2000/svg"
-							>
-								<title>GitHub</title>
-								<path
-									d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"
-								/>
-							</svg>
-                View Source on GitHub
-						</a>
+<body class="h-screen flex flex-col">
+  <header>
+    <nav id="header" role="navigation" class="w-full top-0 bg-gray-50">
+      <div class="w-full flex items-center justify-between mt-0 py-2">
+        <div class="pl-4 flex items-center" style="font-family: 'Inconsolata', monospace;">
+          <a class="text-purple-900 no-underline hover:no-underline font-bold text-2xl lg:text-4xl" href="#">
+            <svg id="Artwork" class="h-8 fill-current inline" xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 154.87 153.27" width="33px">
+              <defs>
+                <style>
+                  .cls-1 {
+                    fill: #E8B45F;
+                    stroke: #E8B45F;
+                    stroke-miterlimit: 10;
+                    stroke-width: 3px;
+                    max-width: 33px;
+                  }
+                </style>
+              </defs>
+              <title>crossed-keys-bold</title>
+              <text x="-282.53" y="-211.04" />
+              <path class="cls-1"
+                d="M398,279.86a22.18,22.18,0,1,0,18.52-37.66,22.19,22.19,0,1,0-28.72,23.94l-27,27-27.46-27.46a22.18,22.18,0,1,0-30-23.51A22.19,22.19,0,1,0,327,271.76l27.6,27.6-46.83,46.83a2.59,2.59,0,0,0,0,3.66l2.52,2.52a2.59,2.59,0,0,0,3.66,0l46.83-46.83,31.56,31.56-12,12a2.5,2.5,0,0,0,3.54,3.54l3.71-3.71,5.94,5.94-3.71,3.71a2.5,2.5,0,1,0,3.54,3.54l12-12-11-11,13.21,13.21a2.59,2.59,0,0,0,3.66,0l2.52-2.52a2.59,2.59,0,0,0,0-3.66L367,299.35l26.4-26.4A21.93,21.93,0,0,0,398,279.86Zm-74.51-18.5a0.48,0.48,0,0,0-.54.56,16.63,16.63,0,0,1-28.67,13.68,16.79,16.79,0,0,1,.49-23.09,16.58,16.58,0,0,1,13.57-4.71,0.46,0.46,0,0,0,.51-0.53,16.6,16.6,0,0,1,4.49-14,16.63,16.63,0,1,1,23.73,23.32A16.58,16.58,0,0,1,323.53,261.36Zm59.16-4.43A16.63,16.63,0,1,1,411,247a0.46,0.46,0,0,0,.53.51,16.6,16.6,0,0,1,14,4.49,16.63,16.63,0,1,1-23.32,23.73,16.58,16.58,0,0,1-4.75-13.58,0.48,0.48,0,0,0-.56-0.54A16.6,16.6,0,0,1,382.69,256.93Z"
+                transform="translate(-282.53 -211.04)" />
+              <path class="cls-1"
+                d="M329.24,337.09l-13,13,12,12a2.5,2.5,0,1,0,3.54-3.54L328,354.83l5.94-5.94,3.71,3.71a2.5,2.5,0,1,0,3.54-3.54Z"
+                transform="translate(-282.53 -211.04)" />
+            </svg>
+            cfbender
+          </a>
+        </div>
+        <a class="inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4"
+          href="#projects">Projects</a>
+      </div>
+    </nav>
+    </section>
+  </header>
+  <main class="m-auto mb-auto w-full flex-auto px-2">
+    <%= @inner_content %>
+  </main>
+  <footer class="bg-gray-50 w-full py-2">
+    <div class="flex justify-between mx-4">
+      <a class="text-sm" href="https://github.com/cfbender/personal-site"><svg
+          class="h-6 fill-current text-gray-600 inline mr-2" role="img" viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg">
+          <title>GitHub</title>
+          <path
+            d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+        </svg>
+        View Source on GitHub
+      </a>
       <div class="flex h-6 text-sm items-center">
         Powered by
         <a href="https://phoenixframework.org/" class="phx-logo ml-2">
-          <img class="max-h-5" src="<%= Routes.static_path(@conn, "/images/phoenix.png") %>" alt="Phoenix Framework Logo"/>
+          <img class="max-h-5" src="<%= Routes.static_path(@conn, " /images/phoenix.png") %>" alt="Phoenix Framework
+          Logo"/>
         </a>
       </div>
-      </div>
-    </footer>
-  </body>
+    </div>
+  </footer>
+</body>
+
 </html>
