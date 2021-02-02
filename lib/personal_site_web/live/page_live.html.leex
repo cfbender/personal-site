@@ -1,10 +1,10 @@
-<body class="h-screen flex flex-col">
-  <main class="<%= if @dark do %>dark<% end %>">
+<body>
+  <main class="flex flex-col h-screen <%= if @dark do %> dark<% end %>">
     <header>
       <nav id="header" role="navigation" class="w-full top-0 bg-gray-50 dark:bg-gray-900">
         <div class="w-full flex items-center justify-between mt-0 py-2">
-          <div class="pl-4 flex items-center" style="font-family: 'Inconsolata', monospace;">
-            <a class="text-purple-900 dark:text-purple-400 no-underline hover:no-underline font-bold text-2xl lg:text-4xl" href="#">
+          <div class="pl-4 flex items-center font-mono">
+            <a class="text-purple-900 dark:text-purple-400 no-underline hover:no-underline font-mono text-xl lg:text-3xl" href="#">
               <svg id="Artwork" class="fill-current inline" xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 154.87 153.27" height="33px" width="33px">
                 <defs>
@@ -51,7 +51,7 @@
           Cody Bender
         </h1>
         <p class="pt-4 text-gray-800 dark:text-gray-200 font-bold flex items-center justify-center lg:justify-start">
-          <svg height="24px" class="h-4 fill-current text-purple-400 pr-4" xmlns="http://www.w3.org/2000/svg"
+          <svg height="24px" class="h-4 fill-current text-purple-900 dark:text-purple-400 pr-4" xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 20 20">
             <path
               d="M9 12H1v6a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-6h-8v2H9v-2zm0-1H0V5c0-1.1.9-2 2-2h4V2a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v1h4a2 2 0 0 1 2 2v6h-9V9H9v2zm3-8V2H8v1h4z" />
@@ -59,7 +59,7 @@
           Software Engineer
         </p>
         <p class="pt-2 text-gray-800 dark:text-gray-200 text-sm lg:text-sm flex items-center justify-center lg:justify-start">
-          <svg class="h-4 fill-current text-purple-400 pr-4" height="24px" xmlns="http://www.w3.org/2000/svg"
+          <svg class="h-4 fill-current text-purple-900 dark:text-purple-400 pr-4" height="24px" xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 20 20">
             <path
               d="M10 20a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm7.75-8a8.01 8.01 0 0 0 0-4h-3.82a28.81 28.81 0 0 1 0 4h3.82zm-.82 2h-3.22a14.44 14.44 0 0 1-.95 3.51A8.03 8.03 0 0 0 16.93 14zm-8.85-2h3.84a24.61 24.61 0 0 0 0-4H8.08a24.61 24.61 0 0 0 0 4zm.25 2c.41 2.4 1.13 4 1.67 4s1.26-1.6 1.67-4H8.33zm-6.08-2h3.82a28.81 28.81 0 0 1 0-4H2.25a8.01 8.01 0 0 0 0 4zm.82 2a8.03 8.03 0 0 0 4.17 3.51c-.42-.96-.74-2.16-.95-3.51H3.07zm13.86-8a8.03 8.03 0 0 0-4.17-3.51c.42.96.74 2.16.95 3.51h3.22zm-8.6 0h3.34c-.41-2.4-1.13-4-1.67-4S8.74 3.6 8.33 6zM3.07 6h3.22c.2-1.35.53-2.55.95-3.51A8.03 8.03 0 0 0 3.07 6z" />
@@ -69,12 +69,12 @@
         <p class="pt-8 text-gray-800 dark:text-gray-200 text-sm">Chemist turned software engineer.</p>
         <div class="pt-8 pb-8">
           <a href="#contact">
-            <button class="font-semibold bg-gray-400 hover:bg-indigo-300 py-2 px-4 rounded-full">
+            <button class="font-semibold bg-gray-400 hover:bg-purple-900 hover:text-gray-50 dark:hover:bg-purple-400 py-2 px-4 rounded-full">
               Get In Touch
             </button>
           </a>
           <a href="https://github.com/cfbender"><svg height="24px"
-              class="h-8 fill-current text-gray-600 hover:text-purple-400 inline mx-4" role="img" viewBox="0 0 24 24"
+              class="h-8 fill-current text-gray-600 hover:text-purple-900 dark:hover:text-purple-400 inline mx-4" role="img" viewBox="0 0 24 24"
               xmlns="http://www.w3.org/2000/svg">
               <title>GitHub</title>
               <path
@@ -82,7 +82,7 @@
             </svg>
           </a>
           <a class="tech" href="https://linkedin.com/in/codyfbender"><svg height="24px"
-              class="h-8 fill-current text-gray-600 hover:text-purple-400 inline mx-4" role="img" viewBox="0 0 24 24"
+              class="h-8 fill-current text-gray-600 hover:text-purple-900 dark:hover:text-purple-400 inline mx-4" role="img" viewBox="0 0 24 24"
               xmlns="http://www.w3.org/2000/svg">
               <title>LinkedIn</title>
               <path
@@ -94,7 +94,7 @@
     </div>
     <footer class="bg-gray-50 dark:bg-gray-900 w-full py-2">
       <div class="flex justify-between mx-4">
-        <a class="text-sm dark:text-gray-400" href="https://github.com/cfbender/personal-site"><svg height="24px"
+        <a class="text-sm dark:text-gray-400 dark:hover:text-gray-200 hover:text-purple-900" href="https://github.com/cfbender/personal-site"><svg height="24px"
             class="h-6 fill-current text-gray-600 dark:text-gray-200 inline mr-2" role="img" viewBox="0 0 24 24"
             xmlns="http://www.w3.org/2000/svg">
             <title>GitHub</title>
