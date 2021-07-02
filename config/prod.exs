@@ -14,7 +14,7 @@ config :personal_site, PersonalSiteWeb.Endpoint,
   url: [scheme: "https", host: "cfb.dev", port: 443],
   force_ssl: [rewrite_on: [:x_forwarded_proto]],
   cache_static_manifest: "priv/static/cache_manifest.json",
-  check_origin: ["//*.cfb.dev"]
+  check_origin: ["//*.cfb.dev", "https://cfb-dev.herokuapp.com"]
 
 # Do not print debug messages in production
 config :logger, level: :info
