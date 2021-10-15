@@ -7,12 +7,8 @@ defmodule PersonalSiteWeb.Endpoint do
   @session_options [
     store: :cookie,
     key: "_personal_site_key",
-    signing_salt: "m+Z8RLjK"
+    signing_salt: "25AEZhg1"
   ]
-
-  socket "/socket", PersonalSiteWeb.UserSocket,
-    websocket: true,
-    longpoll: false
 
   socket "/live", Phoenix.LiveView.Socket, websocket: [connect_info: [session: @session_options]]
 
@@ -24,7 +20,7 @@ defmodule PersonalSiteWeb.Endpoint do
     at: "/",
     from: :personal_site,
     gzip: false,
-    only: ~w(css fonts images js robots.txt)
+    only: ~w(assets fonts images favicon.ico robots.txt)
 
   # Code reloading can be explicitly enabled under the
   # :code_reloader configuration of your endpoint.
@@ -32,7 +28,6 @@ defmodule PersonalSiteWeb.Endpoint do
     socket "/phoenix/live_reload/socket", Phoenix.LiveReloader.Socket
     plug Phoenix.LiveReloader
     plug Phoenix.CodeReloader
-    plug Phoenix.Ecto.CheckRepoStatus, otp_app: :personal_site
   end
 
   plug Phoenix.LiveDashboard.RequestLogger,
