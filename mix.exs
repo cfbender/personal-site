@@ -20,7 +20,7 @@ defmodule PersonalSite.MixProject do
   def application do
     [
       mod: {PersonalSite.Application, []},
-      extra_applications: [:logger, :runtime_tools]
+      extra_applications: [:logger, :runtime_tools, :os_mon]
     ]
   end
 
@@ -58,7 +58,11 @@ defmodule PersonalSite.MixProject do
   defp aliases do
     [
       setup: ["deps.get", "cmd npm install --prefix assets"],
-      "assets.build": ["cmd npm run --prefix assets run build", "esbuild default --minify", "phx.digest"]
+      "assets.build": [
+        "cmd npm --prefix assets run build",
+        "esbuild default --minify",
+        "phx.digest"
+      ]
     ]
   end
 end
